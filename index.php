@@ -31,16 +31,21 @@
     <h1>Form Registration</h1>
     <form action="signup.php" method="POST" class="form-inline" role="form">
       <div class="form-group">
-        <label class="sr-only" for="">Username</label>
-        <input type="text" class="form-control" id="" name="username" placeholder="Your username">
-      </div>
-      <div class="form-group">
         <label class="sr-only" for="">Name</label>
-        <input type="text" class="form-control" id="" name="name" placeholder="Your Name">
+        <input type="text" class="form-control" id="" name="nombre" placeholder="Your username">
       </div>
       <div class="form-group">
         <label class="sr-only" for="">LastName</label>
-        <input type="text" class="form-control" id="" name="lastname" placeholder="Your LastName">
+        <input type="text" class="form-control" id="" name="apellidos" placeholder="Your last name">
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="">Phonenumber</label>
+        <input type="number" class="form-control" id="" name="telefono" placeholder="Your phonenumber">
+      </div>
+
+      <div class="form-group">
+        <label class="sr-only" for="">email</label>
+        <input type="email" class="form-control" id="" name="email" placeholder="Your email">
       </div>
 
       <input type="submit" class="btn btn-primary" value="Submit"></input>

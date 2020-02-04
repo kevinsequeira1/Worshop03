@@ -1,7 +1,7 @@
 <?php
   // get all users from the database
-  $sql = 'SELECT * FROM users';
-  $connection = new mysqli('localhost:3306', 'root', 'root1234', 'php_web2');
+  $sql = 'SELECT * FROM registro';
+  $connection = new mysqli('localhost', 'root', '', 'registro');
   $result = $connection->query($sql);
   $users = $result->fetch_all();
 ?>
@@ -24,6 +24,8 @@
       <tr>
         <th>Name</th>
         <th>Lastname</th>
+        <th>Phonenumber</th>
+        <th>Email</th>
         <th>Actions</th>
       </tr>
       <tbody>
