@@ -1,6 +1,6 @@
 <?php
   // get all users from the database
-  $sql = 'SELECT * FROM registro';
+  $sql = 'SELECT * FROM usuarios';
   $connection = new mysqli('localhost', 'root', '', 'registro');
   $result = $connection->query($sql);
   $users = $result->fetch_all();
@@ -22,17 +22,19 @@
   <h1>List of Users</h1>
     <table class="table table-light">
       <tr>
+        <td>ID</td>
         <th>Name</th>
         <th>Lastname</th>
         <th>Phonenumber</th>
         <th>Email</th>
+
         <th>Actions</th>
       </tr>
       <tbody>
         <?php
           // loop users
             foreach($users as $user) {
-              echo "<tr><td>".$user[0]."</td><td>".$user[1]."</td><td><a href=\"edit.php?id=".$user[0]."\">Edit</a> | Delete</td></tr>";
+              echo "<tr><td>".$user[0]."</td><td>".$user[1]."</td><td>".$user[2]."</td><td>".$user[3]."</td><td>".$user[4]."</td><td><a href=\"edit.php?id=".$user[0]."\">Edit</a> | Delete</td></tr>";
             }
         ?>
       </tbody>

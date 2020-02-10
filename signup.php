@@ -3,10 +3,10 @@
     $name = $_REQUEST['nombre'];
     $lastname = $_REQUEST['apellidos'];
     $phonenumber = $_REQUEST['telefono'];
-    $email = $_REQUEST['telefono'];
+    $email = $_REQUEST['email'];
 
 
-    $sql = "INSERT INTO usuarios(`nombre`, `apellidos`, `telefono`,`email`) VALUES ('$username','$lastname','$phonenumber','$email')";
+    $sql = "INSERT INTO usuarios(`nombre`, `apellidos`, `telefono`,`email`) VALUES ('$name','$lastname','$phonenumber','$email')";
 
     $connection = mysqli_connect('localhost', 'root', '', 'registro');
     mysqli_query($connection, $sql);
