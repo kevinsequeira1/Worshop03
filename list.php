@@ -18,11 +18,14 @@
   <title>Document</title>
 </head>
 <body>
+
+<form action="edit.php" method="POST" class="form-inline" role="form">
+
 <div class="container">
   <h1>List of Users</h1>
     <table class="table table-light">
       <tr>
-        <td>ID</td>
+        <td>id</td>
         <th>Name</th>
         <th>Lastname</th>
         <th>Phonenumber</th>
@@ -34,7 +37,7 @@
         <?php
           // loop users
             foreach($users as $user) {
-              echo "<tr><td>".$user[0]."</td><td>".$user[1]."</td><td>".$user[2]."</td><td>".$user[3]."</td><td>".$user[4]."</td><td><a href=\"edit.php?id=".$user[0]."\">Edit</a> | Delete</td></tr>";
+              echo "<tr><td><input type='number' value='".$user[0]."'></td><td><input type='text' value='".$user[1]."'></td><td><input type='text' value='".$user[2]."'></td><td><input type='number' value='".$user[3]."'></td><td><input type='email' value='".$user[4]."'></td><td><button>Edit</button></td> |<td><button type='submit'> Delete</button></td></td>";
             }
         ?>
       </tbody>
@@ -44,5 +47,10 @@
   $connection->close();
 ?>
 </div>
+
+
+</form>
+
+
 </body>
 </html>
