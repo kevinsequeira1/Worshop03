@@ -32,7 +32,7 @@
         <?php
           // loop users
             foreach($users as $user) {
-              echo "<tr><td>".$user[0]."</td><td>".$user[1]."</td><td><a href=\"edit.php?id=".$user[-1]."\">Edit</a> | Delete</td></tr>";
+              echo "<tr><td>".$user[0]."</td><td>".$user[1]."</td><td><a href=\"edit.php?id=".$user[0]."\">Edit</a> | Delete</td></tr>";
             }
         ?>
       </tbody>
